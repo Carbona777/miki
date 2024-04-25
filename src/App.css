@@ -27,6 +27,11 @@
 .App-link {
   color: #61dafb;
 }
+.body-map__muscle path:hover{   
+  fill: crimson;
+} 
+
+
 
 @keyframes App-logo-spin {
   from {

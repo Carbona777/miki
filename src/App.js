@@ -1,11 +1,14 @@
 import './App.css';
-import Sidebar from './Project/sidebar';
 import Footer from './Project/Footer';
+import Hero from './Project/Hero';
+import Header from './Project/Header';
 
 function App() {
   return (
     <div className="App">
-      <Sidebar/>
+      <Header/>
+      
+      <Hero/>
       <Footer/>
     </div>
   );

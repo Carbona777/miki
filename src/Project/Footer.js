@@ -1,66 +1,130 @@
 import React from 'react';
-import './Combined.css';
+import { MDBFooter, MDBContainer, MDBRow, MDBCol} from 'mdb-react-ui-kit';
+import { MDBIcon } from 'mdb-react-ui-kit';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram, faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faTwitter, faGoogle, faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 
 
-import logo1 from'./logo1.png'; // Import your CSS file
-
-function Footer() {
-    
+export default function App() {
   return (
-    <>
-    <footer>
-      <div className="row">
-        <div className="col">
-          <img src={logo1}className="logo" alt="logo" />
-          <p>
-            MusclesGenerate Copyright 2024 JW Media, LLC, parent company of
-            MusclesMiki. All rights reserved.
-          </p>
+    <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
+      <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
+        <div className='me-5 d-none d-lg-block'>
+          <span>Get connected with us on social networks:</span>
         </div>
-        <div className="col">
-          <h3>Products</h3>
-          <p>Workouts</p>
-          <p>Nutrition</p>
-          <p>Features</p>
-          <p className="email-id">NoneTeam@gmail.com</p>
-          <h4>+91 -01120592366</h4>
-        </div>
-        <div className="col">
-          <h3 className='linkss'>Links</h3>
-          <ul className="links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ul>
-        </div>
-        <div className="col">
-          <h2 className="selter">NewSletter</h2>
 
-          <form>
-            <i className="far fa-envelope"></i>
-            <input type="email" placeholder="Enter your email" required />
-            <button type="submit">
-              <i className="fas fa-arrow-right"></i>
-            </button>
-          </form>
-          <div className="social-icons">
-            <FontAwesomeIcon icon={faFacebook} />
-            <FontAwesomeIcon icon={faInstagram} />
-            <FontAwesomeIcon icon={faWhatsapp} />
-            <FontAwesomeIcon icon={faYoutube} />
-        </div>
-        </div>
+        <div>
+  <a href='' className='me-4 text-reset'>
+    <FontAwesomeIcon icon={faFacebookF} />
+  </a>
+  <a href='' className='me-4 text-reset'>
+    <FontAwesomeIcon icon={faTwitter} />
+  </a>
+  <a href='' className='me-4 text-reset'>
+    <FontAwesomeIcon icon={faGoogle} />
+  </a>
+  <a href='' className='me-4 text-reset'>
+    <FontAwesomeIcon icon={faInstagram} />
+  </a>
+  <a href='' className='me-4 text-reset'>
+    <FontAwesomeIcon icon={faLinkedin} />
+  </a>
+  <a href='' className='me-4 text-reset'>
+    <FontAwesomeIcon icon={faGithub} />
+  </a>
+</div>
+
+      </section>
+
+      <section className=''>
+        <MDBContainer className='text-center text-md-start mt-5'>
+          <MDBRow className='mt-3'>
+            <MDBCol md='3' lg='4' xl='3' className='mx-auto mb-4'>
+              <h6 className='text-uppercase fw-bold mb-4'>
+                <MDBIcon color='secondary' icon='gem' className='me-3' />
+               Muscle Miki
+              </h6>
+              <p>
+              MusclesGenerate Copyright 2024 JW Media, LLC, parent company of
+            MusclesMiki. All rights reserved.
+              </p>
+            </MDBCol>
+
+            <MDBCol md='2' lg='2' xl='2' className='mx-auto mb-4'>
+              <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
+              <p>
+                <a href='#!' className='text-reset'>
+                Workouts                </a>
+              </p>
+              <p>
+                <a href='#!' className='text-reset'>
+                Nutrition
+                </a>
+              </p>
+              <p>
+                <a href='#!' className='text-reset'>
+                Features
+                </a>
+              </p>
+              <p>
+                <a href='#!' className='text-reset'>
+                Directory
+                </a>
+              </p>
+            </MDBCol>
+
+            <MDBCol md='3' lg='2' xl='2' className='mx-auto mb-4'>
+              <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
+              <p>
+                <a href='#!' className='text-reset'>
+                Home
+                </a>
+              </p>
+              <p>
+                <a href='#!' className='text-reset'>
+                About Us
+                </a>
+              </p>
+              <p>
+                <a href='#!' className='text-reset'>
+                Service
+                </a>
+              </p>
+              <p>
+                <a href='#!' className='text-reset'>
+                Contact Us
+                </a>
+              </p>
+            </MDBCol>
+
+            <MDBCol md='4' lg='3' xl='3' className='mx-auto mb-md-0 mb-4'>
+              <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
+              <p>
+                <MDBIcon color='secondary' icon='home' className='me-2' />
+        NoneTeam@gmail.com
+              </p>
+              <p>
+                <MDBIcon color='secondary' icon='envelope' className='me-3' />
+                MuscleMikiSupport@gmail.com
+              </p>
+              <p>
+                <MDBIcon color='secondary' icon='phone' className='me-3' /> + 01 120592366
+              </p>
+              <p>
+                <MDBIcon color='secondary' icon='print' className='me-3' /> + 01 200154433
+              </p>
+            </MDBCol>
+          </MDBRow>
+        </MDBContainer>
+      </section>
+
+      <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
+        © 2021 Copyright:
+        <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
+          blockhaven.com
+        </a>
       </div>
-      <hr />
-      <p className="copyright">©2020 -All Rights Reserved</p>
-    </footer>
-    </>
+    </MDBFooter>
   );
 }
-
-export default Footer;

@@ -1,17 +1,15 @@
-import './App.css';
-import Footer from './Project/Footer';
-import Hero from './Project/Hero';
-import Header from './Project/Header';
+import "./App.css";
+import Hero from "./Screens/Hero";
+
+// Higher Order Function
+import ScreenWrapper from "./HOC/ScreenWrapper";
 
 function App() {
   return (
     <div className="App">
-      <Header/>
-      
-      <Hero/>
-      <Footer/>
+      <Hero />
     </div>
   );
 }
 
-export default App;
+export default ScreenWrapper(App);

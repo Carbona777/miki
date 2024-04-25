@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -6,20 +7,20 @@
     font-family: "Poppins", sans-serif;
 }
 :root{
-    --body-color:#e6bae9;
-    --sidebar-color:#be7acc;
-    --primary-color:#83417d;
+    --body-color:#92cce7;
+    --sidebar-color:#7a9da3;
+    --primary-color:#5fbce7;
     --primary-color-light:#F6F5FF;
 
     --toggle-color:#DDD;
     --text-color:#2c1b2b;
-    --tran-02: all 0.4s ease;
-    --tran-03: all 0.4s ease;
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
     --tran-04: all 0.4s ease;
-    --tran-05: all 0.4s ease;
+    --tran-05: all 0.5s ease;
 }
 body{
-    height: 100vh;
+    height: 10000vh;
     background: rgb(254, 243, 255);
     transition: var(--tran-04);
 
@@ -41,31 +42,38 @@ body.dark{
     left:0;
     height: 100%;
     padding: 12px 1px;
-    width: 210px;
+    width: 160px;
     background: var(--body-color);
     transition: var(--tran-05);
-   z-index: 100;
+    z-index: 50;
 }
 .sidebar.close{
-    width: 56px;
+    width: 60px;
+    padding-bottom:0px;
 }
+
 .sidebar.close .text{
     opacity: 0;
 }
 
 .sidebar li{
-    height: 50px;
+    height: 47px;
     margin-top: 10px;
     list-style: none;
     display: flex;
     align-items: center;
+    padding-left: 9px;
 
 }
 .sidebar .menu{
     margin-top: 20px;
 }
 .sidebar .image-text img{
-    width: 40px;
+    width: 45px;
+}
+.sidebar.close .image-text img{
+    width: 30px;
+   padding: 1px 2px;
 }
 .sidebar .image{
     min-width: 60px;
@@ -80,8 +88,8 @@ body.dark{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
-    min-width: 19px;
+    font-size: 26px;
+    min-width: 41px;
 
 }
 .sidebar li a:hover .icon,.sidebar li a:hover .text{
@@ -133,7 +141,7 @@ body.dark.close .sidebar header .toggle{
 .sidebar header .toggle{
     position: absolute;
     top: 50%;
-    right:  -10px;
+    right:  -17px;
     transform: translateY(-50%)rotate(180deg);
     height: 25px;
     width: 25px;
@@ -143,8 +151,9 @@ body.dark.close .sidebar header .toggle{
     justify-content: center;
     border-radius: 50%;
     color: var(--sidebar-color);
-    font-size: 22px;
+    font-size: 24px;
     transition: var(--tran-03);
+    cursor: pointer;
 
 
 
@@ -158,12 +167,12 @@ body.dark.close .sidebar header .toggle{
 }
 .menu-bar .mode{
     position: relative;
-    border-radius: 8px;
+    border-radius: 90px;
     background: var(--primary-color-light);
 }
 .menu-bar .mode .moon-sun{
     height: 50px;
-    width: 60px;
+    width: 49px;
     display: flex;
     align-items: center;
 }
@@ -235,11 +244,16 @@ body.dark .switch::before{
     color: var(--text-color);
     padding: 10px ;
 }
-.sidebar.close ~ .Home{
+.sidebar.close ~ .Home {
     left: 88px;
-    width: calc(100% -80px);
+    width: calc(100% - 800px);
     padding: 8px 40px;
 
+}
+.sidebar.close ~ footer {
+    right: auto; /* Adjust this value based on your layout */
+    width: calc(100% - 59px); /* Adjust the width based on your sidebar width and margin */
+    padding: 5px 20px 0; /* Keep the same padding as the default */
 }
 *{
     margin: 0;
@@ -253,8 +267,10 @@ body.dark .switch::before{
 body{
     background:var(#18191A);
 }
+
 footer{
-    width: 99%;
+    right: auto;
+    width: 100%;
     position: absolute;
     left: 1px;
     bottom:0;
@@ -263,14 +279,16 @@ footer{
     margin-left: 59px;
     font-size: 13px;
     line-height: 15px;
+    /* Adjust this value based on your layout */
+    width: calc(100% - 59px); /* Adjust the width based on your sidebar width and margin */
+    padding: 5px 20px 0px; 
     
-}
-
+} 
 
 
 
 .row{
-    width: 85%;
+    width: 90%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -279,31 +297,44 @@ footer{
 
 }
 .col{
-    flex-basis: 25%;
+    flex-basis: 14%;
     padding: 10px;
 
     
 }
-.col:nth-child(2) ,:nth-child(3){
-    flex-basis: 15%;
+.col:nth-child(2){
+    flex-basis: 1%;
+}
+.col:nth-child(3){
+    flex-basis: 5%;
 
 }
 .logo{
     width: 80px;
-    margin-top: 30px;
+    margin-top: 10px;
     color: transparent;
     background: transparent;
 }
 .col h3{
     width: fit-content;
     margin-bottom: 40px;
+    margin-left: 39px;
     position: relative;
+
+}
+.col .linkss{
+    margin-left: 3px;
+    position: relative;
+    width: fit-content;
+    margin-bottom: 40px;
+
+    
 
 }
 .email-id{
     width: fit-content;
     border-bottom: 1px solid #ccc;
-    margin: 20px 0;
+    margin: 17px 1px 15px 1px;
 }
 form{
     padding-bottom: 15px;
@@ -343,11 +374,31 @@ form .fa-arrow-right{
     text-align: center;
     line-height: 40px;
     font-size: 30px;
-    color: #69a9b4;
-    background: #fff;
+    color:var(--text-color);
+    background: var(--primary-color);
     margin-right: 15px;
     cursor: pointer;
 }
+.social-icons {
+    display: flex;
+    justify-content: space-around; /* Adjust alignment as needed */
+    align-items: center; /* Adjust alignment as needed */
+
+    color:var(--text-color);
+    margin-right: 15px;
+    cursor: pointer;
+    
+
+}
+
+.social-icons svg {
+    width: 30px; /* Adjust icon size as needed */
+    height: auto; /* Maintain aspect ratio */
+   /* Adjust icon color as needed */
+}
+
+
+
 hr{
     width: 90%;
     border: 0;
@@ -388,21 +439,18 @@ hr{
 
 
 }
-@media (max-width:700px){
-    footer{
-        bottom: unset;
-
+@media (max-width: 700px) {
+    footer {
+        bottom: unset; /* Remove the 'bottom' positioning */
     }
-    .col{
-        flex-basis: 100%;
-    
-        
+    .col {
+        flex-basis: 100%; /* Set the flex-basis to 100% for .col elements */
     }
-    .col:nth-child(2) ,:nth-child(3){
-        flex-basis: 100%;
-    
+    .col:nth-child(2), .col:nth-child(3) {
+        flex-basis: 100%; /* Set the flex-basis to 100% for the second and third .col elements */
     }
 }
+
 .links li {
     list-style: none; /* Remove default list styling */
 }

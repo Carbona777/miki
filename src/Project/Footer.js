@@ -1,5 +1,9 @@
 import React from 'react';
 import './Combined.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram, faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg-icons';
+
+
 
 import logo1 from'./logo1.png'; // Import your CSS file
 
@@ -25,7 +29,7 @@ function Footer() {
           <h4>+91 -01120592366</h4>
         </div>
         <div className="col">
-          <h3>Links</h3>
+          <h3 className='linkss'>Links</h3>
           <ul className="links">
             <li><a href="#">Home</a></li>
             <li><a href="#">About Us</a></li>
@@ -45,11 +49,11 @@ function Footer() {
             </button>
           </form>
           <div className="social-icons">
-            <i className="fab fa-facebook"></i>
-            <i className="fab fa-instagram"></i>
-            <i className="fab fa-whatsapp"></i>
-            <i className="fab fa-youtube"></i>
-          </div>
+            <FontAwesomeIcon icon={faFacebook} />
+            <FontAwesomeIcon icon={faInstagram} />
+            <FontAwesomeIcon icon={faWhatsapp} />
+            <FontAwesomeIcon icon={faYoutube} />
+        </div>
         </div>
       </div>
       <hr />

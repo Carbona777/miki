@@ -25,9 +25,9 @@ function Sidebar() {
         const modeText = document.querySelector('.mode-text');
         body.classList.toggle('dark');
         if (body.classList.contains('dark')) {
-          modeText.innerText = 'Light Mode';
+          modeText.innerText = 'Light ';
         } else {
-          modeText.innerText = 'Dark Mode';
+          modeText.innerText = 'Dark ';
         }
       };
   

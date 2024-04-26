@@ -1,7 +1,7 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 
 function Header() {
   return (
@@ -15,14 +15,10 @@ function Header() {
             <Nav.Link href="#pricing">Routine</Nav.Link>
             <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Calorie Calculator</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                
-              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2"></NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Macro Calculator</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                One Rep Max Calculator
-              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.4">One Rep Max Calculator</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav>
